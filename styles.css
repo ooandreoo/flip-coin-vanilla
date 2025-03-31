@@ -64,6 +64,20 @@
 
 .coin {
   margin: auto;
+  transform-style: preserve-3d;
+  height: 200px;
+  width: 200px;
+}
+
+.coin-face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.coin-back {
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
 
 .flippin-face {
