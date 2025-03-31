@@ -1,0 +1,95 @@
+.header {
+  font-family: "Lucida Handwriting", cursive;
+  display: block;
+  margin: auto;
+  width: 40%;
+  min-height: 100px;
+  text-align: center;
+  border-radius: 24px;
+  --background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0), rgba(255,0,0,1)); 
+  background-image: url('coins.jpg');
+  --background-size: 1000%;
+  animation: dynamicBackground 5s infinite ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes dynamicBackground {
+  0% { background-position: 0% ; }
+  100% { background-position: 100% ; }
+}
+
+.header h1 {
+  text-shadow: 3px 3px 1px black;
+  color: lightgreen;
+} 
+
+.header p {
+  color: white;
+  text-shadow: 2px 1px 1px black;
+}
+
+.body {
+  display: flex;
+  padding: 50px;
+}
+
+.coin-box {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+}
+
+.flip-button {
+  background-color: lightgreen;
+  font-weight: bold;
+  height: 40px;
+  width: 60px;
+  border-radius: 8px;
+  color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+}
+
+.flip-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.flip-button:disabled {
+  background-color: grey;
+  color: white;
+}
+
+.coin {
+  margin: auto;
+}
+
+.flippin-face {
+  animation: coinRotationFace 6s linear;
+}
+
+.flippin-shield {
+  animation: coinRotationShield 7s linear;
+  animation-fill-mode: forwards;
+}
+
+.flip-complete {
+  animation: coinCompleteRotation 1s linear;
+}
+
+@keyframes coinRotationFace{
+  0% { transform: rotateY(0deg) ; }
+  100% { transform: rotateY(1080deg) ; }
+}
+
+@keyframes coinRotationShield{
+  0% { transform: rotateY(0deg) ; }
+  100% { transform: rotateY(1260deg) ; }
+}
+
+@keyframes coinCompleteRotation{
+  0% { transform: rotateY(180deg) ; }
+  100% { transform: rotateY(0deg) ; }
+}

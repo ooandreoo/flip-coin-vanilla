@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin Toss</title>
+    <link rel="stylesheet" href="styles.css">
+  </head
+  <body>
+    <div class="header">
+      <h1>Coin Toss Decision Making Tool</h1>
+      <p>When decision making gets annoying, leave it to the good old coin</p>
+    </div>
+    <div class="body">
+      <div class="coin-box">
+          <svg id="coin-svg" class="coin" height="200" width="200">
+            <defs>
+              <linearGradient id="grad1">
+                <stop offset="0%" stop-color="yellow" />
+                <stop offset="100%" stop-color="grey" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="100" cy="100" rx="85" ry="85" fill="url(#grad1)" stroke="black" stroke-width="10"/>
+            <text fill="#ffffff" font-size="95" font-family="Verdana" x="68" y="130">$</text>
+            Sorry, your browser does not support inline SVG.
+          </svg>
+      </div>
+      <button id="flip-button" class="flip-button">
+        FLIP COIN
+      </button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
