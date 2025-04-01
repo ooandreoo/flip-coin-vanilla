@@ -18,8 +18,10 @@ async function flipCoinRandomly(coin) {
 
 async function removePreviousAnimationClass(coin) {
   disableButton();
-  if(coin.classList.contains('flippin-face'))
+  if(coin.classList.contains('flippin-face')){
     coin.classList.remove('flippin-face');
+    coin.offsetWidth;
+  }
   else if(coin.classList.contains('flippin-shield')){
     coin.classList.add('flip-complete');
     await sleep(1500);
